@@ -1,0 +1,29 @@
+﻿<Window x:Class="WPFStars.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFStars"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Canvas>
+            <Button Style="{StaticResource starButton}"  Canvas.Left="170" Canvas.Top="180">
+                <!--<Path x:Name="firststar" Style="{StaticResource starPath}"></Path>-->
+            </Button>
+            <Button Style="{StaticResource starButton}" Canvas.Left="260" Canvas.Top="180">
+                <!--<Path Style="{StaticResource starPath}"></Path>-->
+            </Button>
+            <Button Style="{StaticResource starButton}" Canvas.Left="350" Canvas.Top="180">
+                <!--<Path Style="{StaticResource starPath}"></Path>-->
+            </Button>
+            <Button Style="{StaticResource starButton}" Canvas.Left="440" Canvas.Top="180" >
+                <!--<Path Style="{StaticResource starPath}"></Path>-->
+            </Button>
+            <Button Style="{StaticResource starButton}" Canvas.Left="530" Canvas.Top="180" >
+                <!--<Path Style="{StaticResource starPath}"></Path>-->
+            </Button>
+            
+        </Canvas>
+    </Grid>
+</Window>
