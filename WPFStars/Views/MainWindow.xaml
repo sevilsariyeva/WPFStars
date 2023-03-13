@@ -8,22 +8,166 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Canvas>
-            <Button Style="{StaticResource starButton}"  Canvas.Left="170" Canvas.Top="180">
-                <!--<Path x:Name="firststar" Style="{StaticResource starPath}"></Path>-->
+            <Button Canvas.Left="170" Canvas.Top="180" HorizontalAlignment="Center" VerticalAlignment="Top" BorderThickness="0" Background="Transparent" RenderTransformOrigin="0.5,0.5">
+                <Path Name="starPath" Fill="Transparent" StrokeThickness="3" Stroke="#E5DE00" Stretch="Fill" Margin="2" Data="M39 4.64044L46.7856 27.4332L47.1324 28.4483H48.2051H73.1845L53.0413 42.3693L52.1079 43.0144L52.4747 44.0882L60.209 66.7309L39.8528 52.6627L39 52.0733L38.1472 52.6627L17.791 66.7309L25.5254 44.0882L25.8921 43.0144L24.9587 42.3693L4.81547 28.4483H29.7949H30.8676L31.2144 27.4332L39 4.64044Z"></Path>
+                <Button.RenderTransform>
+                    <RotateTransform x:Name="myTransform"></RotateTransform>
+                </Button.RenderTransform>
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="myTransform" Storyboard.TargetProperty="(RotateTransform.Angle)"                                             From="0.0" To="360" Duration="0:0:1"                                             ></DoubleAnimation>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="starPath">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5" Value="#E5DE00"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="starPath1">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5" Value="Transparent"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="starPath2">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5" Value="Transparent"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="starPath3">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5" Value="Transparent"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="starPath4">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5" Value="Transparent"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Button.Triggers>
             </Button>
-            <Button Style="{StaticResource starButton}" Canvas.Left="260" Canvas.Top="180">
-                <!--<Path Style="{StaticResource starPath}"></Path>-->
+            <Button Canvas.Left="260" Canvas.Top="180" HorizontalAlignment="Center" VerticalAlignment="Top" BorderThickness="0" Background="Transparent"                RenderTransformOrigin="0.5,0.5">
+                <Path Name="starPath1"  Fill="Transparent" StrokeThickness="3" Stroke="#E5DE00" Stretch="Fill" Margin="2"          Data="M39 4.64044L46.7856 27.4332L47.1324 28.4483H48.2051H73.1845L53.0413 42.3693L52.1079 43.0144L52.4747 44.0882L60.209 66.7309L39.8528 52.6627L39 52.0733L38.1472 52.6627L17.791 66.7309L25.5254 44.0882L25.8921 43.0144L24.9587 42.3693L4.81547 28.4483H29.7949H30.8676L31.2144 27.4332L39 4.64044Z"></Path>
+                <Button.RenderTransform>
+                    <RotateTransform x:Name="myTransform1"></RotateTransform>
+                </Button.RenderTransform>
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="myTransform1"                                             Storyboard.TargetProperty="(RotateTransform.Angle)"                                             From="0.0" To="360" Duration="0:0:1"                                             ></DoubleAnimation>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"                                                          Storyboard.TargetName="starPath1">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5"                                                 Value="#E5DE00"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <DoubleAnimation Storyboard.TargetName="myTransform" Storyboard.TargetProperty="(RotateTransform.Angle)"                                             From="0.0" To="360" Duration="0:0:1"                                             ></DoubleAnimation>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="starPath">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5" Value="#E5DE00"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="starPath2">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5" Value="Transparent"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="starPath3">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5" Value="Transparent"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="starPath4">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5" Value="Transparent"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Button.Triggers>
             </Button>
-            <Button Style="{StaticResource starButton}" Canvas.Left="350" Canvas.Top="180">
-                <!--<Path Style="{StaticResource starPath}"></Path>-->
+            <Button Canvas.Left="350" Canvas.Top="180" HorizontalAlignment="Center" VerticalAlignment="Top" BorderThickness="0" Background="Transparent"                RenderTransformOrigin="0.5,0.5">
+                <Path Name="starPath2" Fill="Transparent" StrokeThickness="3" Stroke="#E5DE00" Stretch="Fill" Margin="2"          Data="M39 4.64044L46.7856 27.4332L47.1324 28.4483H48.2051H73.1845L53.0413 42.3693L52.1079 43.0144L52.4747 44.0882L60.209 66.7309L39.8528 52.6627L39 52.0733L38.1472 52.6627L17.791 66.7309L25.5254 44.0882L25.8921 43.0144L24.9587 42.3693L4.81547 28.4483H29.7949H30.8676L31.2144 27.4332L39 4.64044Z"></Path>
+                <Button.RenderTransform>
+                    <RotateTransform x:Name="myTransform2"></RotateTransform>
+                </Button.RenderTransform>
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="myTransform1"                                             Storyboard.TargetProperty="(RotateTransform.Angle)"                                             From="0.0" To="360" Duration="0:0:1"                                             ></DoubleAnimation>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"                                                          Storyboard.TargetName="starPath1">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5"                                                 Value="#E5DE00"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <DoubleAnimation Storyboard.TargetName="myTransform" Storyboard.TargetProperty="(RotateTransform.Angle)"                                             From="0.0" To="360" Duration="0:0:1"                                             ></DoubleAnimation>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="starPath">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5" Value="#E5DE00"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <DoubleAnimation Storyboard.TargetName="myTransform2"                                             Storyboard.TargetProperty="(RotateTransform.Angle)"                                             From="0.0" To="360" Duration="0:0:1"                                             ></DoubleAnimation>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"                                                          Storyboard.TargetName="starPath2">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5"                                                 Value="#E5DE00"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="starPath3">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5" Value="Transparent"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="starPath4">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5" Value="Transparent"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Button.Triggers>
             </Button>
-            <Button Style="{StaticResource starButton}" Canvas.Left="440" Canvas.Top="180" >
-                <!--<Path Style="{StaticResource starPath}"></Path>-->
+            <Button Canvas.Left="440" Canvas.Top="180" HorizontalAlignment="Center" VerticalAlignment="Top" BorderThickness="0" Background="Transparent"                RenderTransformOrigin="0.5,0.5">
+                <Path Name="starPath3" Fill="Transparent" StrokeThickness="3" Stroke="#E5DE00" Stretch="Fill" Margin="2"          Data="M39 4.64044L46.7856 27.4332L47.1324 28.4483H48.2051H73.1845L53.0413 42.3693L52.1079 43.0144L52.4747 44.0882L60.209 66.7309L39.8528 52.6627L39 52.0733L38.1472 52.6627L17.791 66.7309L25.5254 44.0882L25.8921 43.0144L24.9587 42.3693L4.81547 28.4483H29.7949H30.8676L31.2144 27.4332L39 4.64044Z"></Path>
+                <Button.RenderTransform>
+                    <RotateTransform x:Name="myTransform3"></RotateTransform>
+                </Button.RenderTransform>
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="myTransform1"                                             Storyboard.TargetProperty="(RotateTransform.Angle)"                                             From="0.0" To="360" Duration="0:0:1"                                             ></DoubleAnimation>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"                                                          Storyboard.TargetName="starPath1">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5"                                                 Value="#E5DE00"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <DoubleAnimation Storyboard.TargetName="myTransform" Storyboard.TargetProperty="(RotateTransform.Angle)"                                             From="0.0" To="360" Duration="0:0:1"                                             ></DoubleAnimation>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="starPath">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5" Value="#E5DE00"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <DoubleAnimation Storyboard.TargetName="myTransform2"                                             Storyboard.TargetProperty="(RotateTransform.Angle)"                                             From="0.0" To="360" Duration="0:0:1"                                             ></DoubleAnimation>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"                                                          Storyboard.TargetName="starPath2">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5"                                                 Value="#E5DE00"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <DoubleAnimation Storyboard.TargetName="myTransform3"                                             Storyboard.TargetProperty="(RotateTransform.Angle)"                                             From="0.0" To="360" Duration="0:0:1"                                             ></DoubleAnimation>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"                                                          Storyboard.TargetName="starPath3">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5"                                                 Value="#E5DE00"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="starPath4">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5" Value="Transparent"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Button.Triggers>
             </Button>
-            <Button Style="{StaticResource starButton}" Canvas.Left="530" Canvas.Top="180" >
-                <!--<Path Style="{StaticResource starPath}"></Path>-->
+            <Button Canvas.Left="530" Canvas.Top="180" HorizontalAlignment="Center" VerticalAlignment="Top" BorderThickness="0" Background="Transparent"                RenderTransformOrigin="0.5,0.5">
+                <Path Name="starPath4" Fill="Transparent" StrokeThickness="3" Stroke="#E5DE00" Stretch="Fill" Margin="2"          Data="M39 4.64044L46.7856 27.4332L47.1324 28.4483H48.2051H73.1845L53.0413 42.3693L52.1079 43.0144L52.4747 44.0882L60.209 66.7309L39.8528 52.6627L39 52.0733L38.1472 52.6627L17.791 66.7309L25.5254 44.0882L25.8921 43.0144L24.9587 42.3693L4.81547 28.4483H29.7949H30.8676L31.2144 27.4332L39 4.64044Z"></Path>
+                <Button.RenderTransform>
+                    <RotateTransform x:Name="myTransform4"></RotateTransform>
+                </Button.RenderTransform>
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="myTransform1"                                             Storyboard.TargetProperty="(RotateTransform.Angle)"                                             From="0.0" To="360" Duration="0:0:1"                                             ></DoubleAnimation>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"                                                          Storyboard.TargetName="starPath1">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5"                                                 Value="#E5DE00"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <DoubleAnimation Storyboard.TargetName="myTransform" Storyboard.TargetProperty="(RotateTransform.Angle)"                                             From="0.0" To="360" Duration="0:0:1"                                             ></DoubleAnimation>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="starPath">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5" Value="#E5DE00"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <DoubleAnimation Storyboard.TargetName="myTransform2"                                             Storyboard.TargetProperty="(RotateTransform.Angle)"                                             From="0.0" To="360" Duration="0:0:1"                                             ></DoubleAnimation>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"                                                          Storyboard.TargetName="starPath2">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5"                                                 Value="#E5DE00"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <DoubleAnimation Storyboard.TargetName="myTransform3"                                             Storyboard.TargetProperty="(RotateTransform.Angle)"                                             From="0.0" To="360" Duration="0:0:1"                                             ></DoubleAnimation>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"                                                          Storyboard.TargetName="starPath3">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5"                                                 Value="#E5DE00"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <DoubleAnimation Storyboard.TargetName="myTransform4"                                             Storyboard.TargetProperty="(RotateTransform.Angle)"                                             From="0.0" To="360" Duration="0:0:1"                                             ></DoubleAnimation>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"                                                          Storyboard.TargetName="starPath4">
+                                    <LinearColorKeyFrame KeyTime="0:0:0.5"                                                 Value="#E5DE00"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Button.Triggers>
             </Button>
-            
         </Canvas>
     </Grid>
 </Window>
